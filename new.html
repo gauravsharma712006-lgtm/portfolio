@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaurav Sharma • Portfolio</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+
+    <style>
+        html, body {
+            background: #050505 !important;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            width: 100%;
+            background: #050505; /* Dark background */
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* IMAGE (smaller now) */
+        .hero-img {
+            position: absolute;
+            left: 6%;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 800px;
+            height: 350px;
+            background-image: url("I.jpg");
+            background-size: contain;
+            background-position: center;
+            border-radius: 15px;
+            box-shadow: 0 0 25px rgba(0,234,255,0.25);
+            border: 1px solid rgba(255,255,255,0.12);
+            z-index: 2;
+        }
+
+        .section {
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(12px);
+            border-radius: 14px;
+            border: 1px solid rgba(255,255,255,0.18);
+            padding: 20px;
+            width: 380px;
+            line-height: 1.6;
+            box-shadow: 0 0 22px rgba(0,234,255,0.18);
+            opacity: 0;
+            transform: translateY(-60px);
+            animation: slideDown 0.9s ease forwards;
+        }
+
+        #about { top: 6%; }
+        #projects { top: 36%; }
+        #future { top: 66%; }
+        #contact { top: 96%; }
+
+        @keyframes slideDown {
+            0% { opacity: 0; transform: translateY(-60px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Typing Animation */
+        .typing {
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 2px solid #00eaff;
+            width: 0;
+            animation: typing 4s steps(40, end) forwards, blink 0.75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink { 50% { border-color: transparent; } }
+
+        /* Section title animation */
+        .title {
+            font-size: 22px;
+            color: #00eaff;
+            font-weight: 600;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 4px #00eaff; }
+            to { text-shadow: 0 0 14px #00eaff; }
+        }
+
+        .contact-email {
+            margin-top: 10px;
+            padding: 10px;
+            background: rgba(255,255,255,0.08);
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.18);
+        }
+
+        /* Floating particles */
+        .particle {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: #00eaff;
+            border-radius: 50%;
+            filter: blur(4px);
+            opacity: 0.6;
+            animation: floatUp 7s linear infinite;
+        }
+
+        @keyframes floatUp {
+            from { transform: translateY(110vh); opacity: 0; }
+            to { transform: translateY(-20vh); opacity: 1; }
+        }
+
+        /* Mobile adjustments */
+        @media (max-width: 760px) {
+            .hero-img {
+                position: relative;
+                width: 70%;
+                height: 300px;
+                left: 50%;
+                transform: translateX(-50%);
+                top: 20px;
+            }
+            #about, #projects, #future, #contact {
+                position: relative;
+                right: auto;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 90%;
+                margin-top: 20px;
+            }
+        }
+    .right-stack {
+            position: absolute;
+            right: 6%;
+            top: 6%;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            width: 380px;
+            z-index: 5;
+        }
+
+        .box-hover {
+            transition: 0.25s ease;
+            transform-origin: center;
+        }
+        .box-hover:hover {
+            transform: scale(1.05) translateY(-6px);
+            box-shadow: 0 0 35px rgba(0,234,255,0.35);
+            border-color: rgba(0,234,255,0.35);
+        }
+
+        </style>
+</head>
+
+<body>
+
+    <!-- Floating particles -->
+    <div class="particle" style="left: 20%; animation-delay: 0s;"></div>
+    <div class="particle" style="left: 55%; animation-delay: 1.5s;"></div>
+    <div class="particle" style="left: 75%; animation-delay: 3s;"></div>
+    <div class="particle" style="left: 35%; animation-delay: 4.2s;"></div>
+
+    <!-- HERO IMAGE -->
+    <div class="hero-img"></div>
+
+    <!-- STACKED BOXES CONTAINER -->
+    <div class="right-stack">
+        <div id="about" class="section box-hover">
+            <div class="title">ABOUT ME</div><br>
+            <div class="typing">Hello everyone, I'm learning Cloud Computing and improving my DSA 
+skills. I know C, C++ and love creating new things.</div>
+            <br>
+            <a href="https://www.linkedin.com/in/gaurav-sharma0007" target="_blank" style="color:#00eaff; text-decoration:none; font-weight:600;">View My LinkedIn Profile →</a>
+        </div>
+
+        <div id="projects" class="section box-hover">
+            <div class="title">PROJECTS</div><br>
+            <strong>📌 Dockerized Portfolio (Live)</strong><br>
+            Deployed on AWS EC2 using Docker + Nginx.<br><br>
+
+            <strong>📌 Static Deployment Pipeline</strong><br>
+            CI/CD automation planned using GitHub Actions.<br><br>
+            
+            <strong>📌 A Bill Management system</strong><br>
+            made in C++ using dynamic data structures<br><br>
+
+            <strong>📌 Cricket Score tracking system (C++)</strong><br>
+            Using Recursion and logic building
+        </div>
+
+        <div id="future" class="section box-hover">
+            <div class="title">FUTURE PLANS</div><br>
+            • Add domain with HTTPS using Cloudflare<br>
+            • Build React + Node project<br>
+            • Make projects on real world problems<br>
+            • Automate deployments using CI/CD<br>
+            • Learn Kubernetes<br>
+            • Aim for Cloud/DevOps internship
+        </div>
+
+        <div id="contact" class="section box-hover">
+            <div class="title">CONTACT ME</div><br>
+            <div class="contact-email">
+                📩 <strong>Email:</strong><br>
+                gauravsharma712006@gmail.com
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

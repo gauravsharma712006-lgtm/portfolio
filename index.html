@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaurav's Webpage</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            width: 100%;
+            background-image: url("G.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Soft animated gradient overlay */
+        body::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to bottom right,
+                rgba(0,0,0,0.55),
+                rgba(0,0,0,0.15)
+            );
+            animation: gradientMove 8s ease infinite alternate;
+            z-index: 0;
+        }
+
+        @keyframes gradientMove {
+            0% { opacity: 0.9; }
+            100% { opacity: 0.7; }
+        }
+
+        /* Floating glowing particles */
+        .particle {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: #00eaff;
+            border-radius: 50%;
+            filter: blur(3px);
+            opacity: 0.6;
+            animation: floatUp 6s linear infinite;
+        }
+
+        @keyframes floatUp {
+            from { transform: translateY(120vh); opacity: 0; }
+            to { transform: translateY(-20vh); opacity: 1; }
+        }
+
+        .top-right {
+            position: absolute;
+            top: 6%;
+            right: 6%;
+            z-index: 2;
+            text-align: right;
+            background: rgba(255,255,255,0.10);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            border: 1.5px solid rgba(255,255,255,0.30);
+            padding: clamp(14px, 2vw, 26px);
+            max-width: min(92%, 400px);
+            font-size: clamp(18px, 2.8vw, 30px);
+            line-height: 1.5;
+
+            /* Glow */
+            box-shadow: 0 0 25px rgba(0, 234, 255, 0.25);
+
+            /* Fade + scale animation */
+            opacity: 0;
+            transform: scale(0.9) translate(20px, -20px);
+            animation: appear 1.3s ease forwards;
+        }
+
+        @keyframes appear {
+            to {
+                opacity: 1;
+                transform: scale(1) translate(0, 0);
+            }
+        }
+
+        /* Hover tilt effect */
+        .top-right:hover {
+            transform: scale(1.02) translate(0, 0);
+            transition: 0.25s ease-in-out;
+        }
+
+        .top-right span {
+            font-size: clamp(14px, 2.4vw, 22px);
+        }
+
+        .top-right a {
+            color: #00eaff;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: clamp(16px, 2.5vw, 22px);
+            position: relative;
+        }
+
+        /* animated underline */
+        .top-right a::after {
+            content: "";
+            position: absolute;
+            height: 2px;
+            width: 0%;
+            left: 0;
+            bottom: -3px;
+            background: #00eaff;
+            transition: 0.3s;
+        }
+
+        .top-right a:hover::after {
+            width: 100%;
+        }
+
+        /* Neon glow hover */
+        .top-right a:hover {
+            text-shadow: 0 0 10px #00eaff, 0 0 20px #00eaff;
+        }
+
+        /* Social icons */
+        .icons {
+            margin-top: 10px;
+            display: flex;
+            justify-content: right;
+            gap: 16px;
+        }
+
+        .icons a {
+            color: white;
+            font-size: clamp(20px, 3vw, 30px);
+            transition: 0.3s;
+        }
+
+        .icons a:hover {
+            color: #00eaff;
+            text-shadow: 0 0 18px #00eaff;
+        }
+
+        /* Signature bottom-left */
+        .signature {
+            position: absolute;
+            bottom: 10px;
+            left: 15px;
+            z-index: 2;
+            font-size: clamp(12px, 2vw, 16px);
+            opacity: 0.75;
+        }
+
+        @media (max-width: 600px) {
+            .top-right {
+                right: 50%;
+                transform: translateX(50%);
+                text-align: center;
+                top: 68%;
+                max-width: 90%;
+            }
+            .icons {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Floating glowing particles -->
+    <div class="particle" style="left: 20%; animation-delay: 0s;"></div>
+    <div class="particle" style="left: 50%; animation-delay: 1s;"></div>
+    <div class="particle" style="left: 75%; animation-delay: 2.2s;"></div>
+    <div class="particle" style="left: 30%; animation-delay: 3s;"></div>
+
+    <div class="top-right">
+        Step Into Gaurav’s World of Code & Creation ✨<br>
+        <span>Cloud Enthusiast & C/C++ Developer</span>
+        <br><br>
+        <a href="new.html">My Portfolio →</a>
+
+        <div class="icons">
+            <a href="https://www.linkedin.com/in/gaurav-sharma0007" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/codewithgaurav007?igsh=czRidm5wMGIxNGlw" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+
+    <!-- Signature -->
+    <div class="signature">Made with ❤️ by Gaurav Sharma</div>
+
+</body>
+</html>
