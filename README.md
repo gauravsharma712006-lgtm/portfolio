@@ -35,7 +35,8 @@ This portfolio is deployed using the following setup:
 ---
 
 ## 📸 Screenshots 
-![Screenshot](./screenshots/home.png)
+![Screenshot](./screenshots/Portfolio.png)
+![Screenshot](./screenshots/Portfolio2.png)
 
 
 
