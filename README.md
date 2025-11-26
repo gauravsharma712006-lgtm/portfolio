@@ -38,4 +38,49 @@ This portfolio is deployed using the following setup:
 
 
 
+---
+
+## 📦 Project Structure  
+
+mywebsite/
+├── index.html
+├── G.jpg
+├── I.jgp
+└── new.html
+
+
+---
+
+## ✨ Features  
+- Clean & responsive UI  
+- Showcases my projects & experience  
+- Hosted on AWS for real-world exposure  
+- Fast and lightweight  
+- Easy to modify and expand
+
+---
+
+## 🎯 Future Improvements  
+- Add animations & transitions  
+- Add project case-study pages  
+- Deploy on HTTPS  
+- Dockerize the setup  
+- Add blogs section  
+
+---
+
+##  Contact  
+If you want to connect: Gauravsharma712006@gmail.com
+
+**Gaurav Sharma**  
+📍 India  
+💼 Aspiring Cloud & Backend Engineer  
+📧 Gauravsharma712006@gmail.com
+🌐 Portfolio: http://13.48.10.47:8081/
+
+---
+
+Made with ❤️ and lots of coffee.  
+
+
 
