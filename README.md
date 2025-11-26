@@ -7,7 +7,7 @@ This project showcases my skills, projects, achievements, and my journey in tech
 
 ## 🔗 Live Portfolio Link  
 👉 **Visit Here:**  
-🌐 http://13.48.10.47:8081/
+🌐 http://16.171.184.122:8081/
 
 ---
 
