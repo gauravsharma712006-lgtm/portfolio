@@ -46,9 +46,9 @@ This portfolio is deployed using the following setup:
 ## 📦 Project Structure  
 
 mywebsite/
-├── index.html
-├── G.jpg
-├── I.jgp
+├── index.html  
+├── G.jpg  
+├── I.jgp  
 └── new.html
 
 
